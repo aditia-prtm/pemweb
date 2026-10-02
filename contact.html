@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Aditia Pratama</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="status-badge">
+            <span class="dot"></span>
+            Available for New Project
+        </div>
+
+        <label for="nav-toggle" class="menu-toggle" aria-label="Buka atau tutup menu navigasi">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="btn-talk">Let's Talk <span class="arrow">&#8599;</span></a>
+    </header>
+
+    <main class="page-main">
+        <section class="page-header-section">
+            <div class="section-tag">// GET IN TOUCH</div>
+            <h1 class="page-title">LET'S <span class="outline-text">TALK</span></h1>
+            <p class="page-subtitle">Have a project in mind, an internship opportunity, or just want to say hello? I'd love to hear from you.</p>
+        </section>
+
+        <section class="contact-container" aria-label="Informasi dan formulir kontak">
+            <aside class="contact-info-panel">
+                <p class="projects-count">OPEN TO COLLABORATE</p>
+                <h2 class="contact-info-title">Let's build something useful together.</h2>
+                <p class="contact-info-text">I am currently available for internships, freelance work, and new web projects. Send a message or reach me through any of the channels below.</p>
+
+                <a href="mailto:mhdaditiaprtm268@gmail.com" class="contact-method">
+                    <span class="contact-method-label">Email</span>
+                    <span class="contact-method-value">mhdaditiaprtm268@gmail.com</span>
+                </a>
+                <div class="contact-method">
+                    <span class="contact-method-label">Location</span>
+                    <span class="contact-method-value">Indonesia</span>
+                </div>
+                <div class="contact-method">
+                    <span class="contact-method-label">Status</span>
+                    <span class="contact-method-value text-green">Available for New Project</span>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="https://github.com/aditia-prtm" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <img src="img/socials/github.png" alt="" class="social-icon"> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/m-aditia-putra-pratama-a3b0bb376/" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <img src="img/socials/linkedin.png" alt="" class="social-icon"> LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/adtxprtm_" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <img src="img/socials/instagram.png" alt="" class="social-icon"> Instagram
+                    </a>
+                </div>
+            </aside>
+
+            <div class="contact-form-card">
+                <h2 class="about-heading">Send a Message</h2>
+                <p class="contact-form-intro">Fill in the form and I'll get back to you as soon as I can.</p>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-row">
+                        <label class="form-field">
+                            <span>Name</span>
+                            <input type="text" name="name" id="contact-name" placeholder="Your name" required autocomplete="name">
+                        </label>
+                        <label class="form-field">
+                            <span>Email</span>
+                            <input type="email" name="email" id="contact-email" placeholder="you@email.com" required autocomplete="email">
+                        </label>
+                    </div>
+                    <label class="form-field">
+                        <span>Subject</span>
+                        <input type="text" name="subject" id="contact-subject" placeholder="What is this about?" required>
+                    </label>
+                    <label class="form-field">
+                        <span>Message</span>
+                        <textarea name="message" id="contact-message" rows="6" placeholder="Tell me about your idea, timeline, or question." required></textarea>
+                    </label>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                    <button type="submit" class="btn-collab btn-full">Send Message <span class="arrow">&#8599;</span></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-copy">&copy; 2026 Aditia Pratama. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/aditia-prtm" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/m-aditia-putra-pratama-a3b0bb376/" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/adtxprtm_" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById("contact-form");
+        const statusEl = document.getElementById("form-status");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("contact-name").value.trim();
+            const email = document.getElementById("contact-email").value.trim();
+            const subject = document.getElementById("contact-subject").value.trim();
+            const message = document.getElementById("contact-message").value.trim();
+
+            if (!name || !email || !subject || !message) {
+                statusEl.textContent = "Please fill in all fields before sending.";
+                return;
+            }
+
+            const body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
+            const mailto = "mailto:mhdaditiaprtm268@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+            statusEl.textContent = "Opening your email app to send the message.";
+            window.location.href = mailto;
+        });
+    </script>
+</body>
+
+</html>
