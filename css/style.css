@@ -97,6 +97,24 @@ a {
 .hero {
     position: relative;
     padding: 28px 48px;
+    overflow: hidden;
+}
+
+/* Tech Dot Grid Matrix Background */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(rgba(17, 17, 17, 0.22) 1.5px, transparent 1.5px),
+        linear-gradient(to right, rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+    background-size: 26px 26px, 52px 52px, 52px 52px;
+    background-position: center center;
+    mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, #000 40%, transparent 90%);
+    -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, #000 40%, transparent 90%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-title {
@@ -135,6 +153,7 @@ a {
 
 /* Profile photo */
 .hero-photo {
+    position: relative;
     margin-top: 20px;
     width: 360px;
     height: 360px;
