@@ -919,28 +919,11 @@ a {
     padding: 7px;
 }
 
-.skill-icon-badge.text-badge {
-    background-color: #111111;
-    color: #ffffff;
-    border: none;
-    padding: 0;
-}
-
 .skill-icon-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
-}
-
-.skill-level-tag {
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 20px;
-    background-color: #f6f6f6;
-    color: #555555;
-    border: 1px solid #e8e8e8;
 }
 
 .skill-name {
