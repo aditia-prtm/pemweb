@@ -313,11 +313,14 @@ a {
     background-color: #fafafa;
     border: 1px solid #ebebeb;
     border-radius: 20px;
-    padding: 22px 20px;
+    padding: 20px 18px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
     animation: reveal-right 0.7s 0.35s ease-out both;
+    max-width: 310px;
+    width: 100%;
+    justify-self: end;
 }
 
 .connect-header {
@@ -1554,7 +1557,7 @@ a.contact-method:hover {
 
     /* Hero section tablet */
     .hero {
-        padding: 96px 28px 36px;
+        padding: 120px 28px 36px;
     }
 
     .hero-title {
@@ -1695,7 +1698,7 @@ a.contact-method:hover {
     }
 
     .hero {
-        padding: 86px 18px 28px;
+        padding: 110px 18px 28px;
     }
 
     .hero-title {
