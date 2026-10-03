@@ -1035,6 +1035,23 @@ a {
     transform: translateY(-2px);
 }
 
+.btn-project-private {
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    color: #888888;
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.btn-project-private:hover {
+    transform: none;
+    border-color: #e5e5e5;
+}
+
+.btn-project-private .social-icon {
+    opacity: 0.5;
+}
+
 .btn-project-demo {
     background-color: #111111;
     color: #ffffff;
