@@ -398,17 +398,6 @@ a {
     color: #888888;
 }
 
-.hero-social-arrow {
-    font-size: 13px;
-    color: #999999;
-    transition: transform 0.25s ease, color 0.25s ease;
-}
-
-.hero-social-card:hover .hero-social-arrow {
-    color: #111111;
-    transform: translate(2px, -2px);
-}
-
 .btn-collab {
     display: inline-flex;
     align-items: center;
