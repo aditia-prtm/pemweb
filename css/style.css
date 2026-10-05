@@ -1,5 +1,18 @@
+/* ==========================================================================
+   PORTFOLIO STYLESHEET - ADITIA PRATAMA
+   --------------------------------------------------------------------------
+   Demonstrasi Penggunaan Selector CSS:
+   a) Element selector      : body, h1, h2, h3, p, a, img, button, input, textarea, header, footer, nav, section, article, aside
+   b) Class selector        : .navbar, .card, .highlight, .hero-title, .stat-card, .skill-card, .project-card, .btn-talk
+   c) ID selector           : #header, #footer, #nav-toggle, #contact-form, #contact-name, #contact-email, #contact-subject, #contact-message, #form-status
+   d) Descendant selector   : header nav a, .nav-menu a, .footer-links a, .contact-form .form-row, .skills-grid .skill-card, .projects-grid .project-card
+   e) Group selector        : h1, h2, h3 / input, textarea / .btn-hero-primary, .btn-hero-secondary / .btn-collab, .btn-talk
+   f) Pseudo-class selector : a:hover, button:active, input:focus, .nav-toggle:checked, .menu-toggle span:nth-child(1), .stat-card:hover
+   g) Attribute selector    : input[type="text"], input[type="email"], input[type="checkbox"], a[target="_blank"], button[type="submit"]
+   ========================================================================== */
+
 /* ========================================
-   Reset & Base
+   1. RESET, BASE & ELEMENT SELECTORS (a, e)
    ======================================== */
 * {
     margin: 0;
@@ -7,6 +20,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* [a) Element Selector: body] */
 body {
     font-family: "Outfit", "Poppins", "Montserrat", Arial, Helvetica, sans-serif;
     background-color: #ffffff;
@@ -15,17 +33,126 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
 }
 
+/* [e) Group Selector: h1, h2, h3, h4, h5, h6] */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", "Outfit", "Montserrat", Arial, Helvetica, sans-serif;
+    color: #111111;
+    line-height: 1.25;
+}
+
+/* [a) Element Selector: h1] */
+h1 {
+    font-weight: 800;
+}
+
+/* [a) Element Selector: h2] */
+h2 {
+    font-weight: 700;
+}
+
+/* [a) Element Selector: h3] */
+h3 {
+    font-weight: 700;
+}
+
+/* [a) Element Selector: p] */
+p {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* [a) Element Selector: a] */
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+/* [a) Element Selector: img] */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* [a) Element Selector: button] */
+button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* [e) Group Selector: input, textarea] */
+input,
+textarea {
+    font-family: inherit;
+    font-size: 14px;
+    color: #111111;
+    outline: none;
+}
+
+/* [e) Group Selector: header, footer, nav, section, article, aside] */
+header,
+footer,
+nav,
+section,
+article,
+aside {
+    display: block;
 }
 
 /* ========================================
-   Navigation
+   2. REUSABLE UTILITIES & CLASS SELECTORS (b)
    ======================================== */
-.navbar {
+/* [b) Class Selector: .card] */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* [b) Class Selector: .highlight] */
+.highlight {
+    color: #111111;
+    font-weight: 700;
+}
+
+.text-green {
+    color: #2ecc71;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px #111111;
+}
+
+.solid-text {
+    color: #111111;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* ========================================
+   3. NAVIGATION & HEADER (#header, ID & Descendant) (b, c, d, f, g)
+   ======================================== */
+/* [c) ID Selector: #header] */
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -39,7 +166,21 @@ a {
     border-bottom: 1px solid #eeeeee;
 }
 
-.nav-toggle,
+/* [b) Class Selector: .navbar] */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* [c) ID Selector: #nav-toggle & g) Attribute Selector: input[type="checkbox"]] */
+#nav-toggle,
+input[type="checkbox"].nav-toggle {
+    display: none;
+}
+
 .menu-toggle {
     display: none;
 }
@@ -55,6 +196,7 @@ a {
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .nav-brand:hover] */
 .nav-brand:hover {
     opacity: 0.75;
     transform: translateY(-1px);
@@ -68,6 +210,8 @@ a {
     font-weight: 500;
 }
 
+/* [d) Descendant Selector: header nav a / .nav-menu a] */
+header nav a,
 .nav-menu a {
     display: flex;
     align-items: center;
@@ -75,19 +219,27 @@ a {
     transition: color 0.25s ease, transform 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .nav-menu a:hover] */
 .nav-menu a:hover {
     color: #777777;
     transform: translateY(-2px);
 }
 
+/* [f) Pseudo-class Selector: .nav-menu a.active] */
 .nav-menu a.active {
     font-weight: 700;
     color: #111111;
 }
 
+/* ========================================
+   4. BUTTONS & INTERACTION (b, e, f, g)
+   ======================================== */
+/* [e) Group Selector: .btn-collab, .btn-talk] */
+.btn-collab,
 .btn-talk {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     border: none;
     background-color: #111111;
@@ -97,15 +249,39 @@ a {
     font-family: inherit;
     font-size: 15px;
     font-weight: 500;
-    transition: transform 0.25s ease, background-color 0.25s ease;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.btn-talk .arrow {
+/* [e) Group Selector + f) Pseudo-class Selector: .btn-collab:hover, .btn-talk:hover] */
+.btn-collab:hover,
+.btn-talk:hover {
+    background-color: #333333;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* [f) Pseudo-class Selector: button:active] */
+button:active,
+.btn-collab:active,
+.btn-talk:active,
+.btn-hero-primary:active,
+.btn-hero-secondary:active {
+    transform: scale(0.97);
+}
+
+.btn-talk .arrow,
+.btn-collab .arrow {
     font-size: 16px;
 }
 
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
+
 /* ========================================
-   Hero
+   5. HERO SECTION (a, b, d, e, f)
    ======================================== */
 .hero {
     position: relative;
@@ -117,7 +293,6 @@ a {
     overflow: hidden;
 }
 
-/* Tech Line Grid Background (No Dots) */
 .hero::before {
     content: "";
     position: absolute;
@@ -133,6 +308,7 @@ a {
     z-index: 0;
 }
 
+/* [b) Class Selector: .hero-title] */
 .hero-title {
     position: relative;
     z-index: 2;
@@ -140,7 +316,6 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
-    font-family: "Poppins", "Outfit", "Montserrat", Arial, Helvetica, sans-serif;
     font-size: clamp(52px, 7.5vw, 110px);
     line-height: 1;
     font-weight: 800;
@@ -149,16 +324,6 @@ a {
     animation: reveal-down 0.7s 0.1s ease-out both;
 }
 
-.outline-text {
-    color: transparent;
-    -webkit-text-stroke: 2px #111111;
-}
-
-.solid-text {
-    color: #111111;
-}
-
-/* Hero Main Layout */
 .hero-main-layout {
     position: relative;
     z-index: 2;
@@ -171,7 +336,7 @@ a {
     margin: 32px auto 0;
 }
 
-/* Left Card: Intro, CTAs, Highlights */
+/* Left Hero Intro */
 .hero-intro-card {
     display: flex;
     flex-direction: column;
@@ -202,6 +367,8 @@ a {
     margin-bottom: 22px;
 }
 
+/* [d) Descendant Selector: .hero-intro-card .hero-cta-buttons] */
+.hero-intro-card .hero-cta-buttons,
 .hero-cta-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -209,46 +376,45 @@ a {
     margin-bottom: 0;
 }
 
-.btn-hero-primary {
+/* [e) Group Selector: .btn-hero-primary, .btn-hero-secondary] */
+.btn-hero-primary,
+.btn-hero-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #111111;
-    color: #ffffff;
     padding: 12px 24px;
     border-radius: 30px;
     font-size: 14.5px;
     font-weight: 600;
-    transition: transform 0.25s ease, background-color 0.25s ease;
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
+.btn-hero-primary {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* [f) Pseudo-class Selector: .btn-hero-primary:hover] */
 .btn-hero-primary:hover {
     background-color: #333333;
     transform: translateY(-2px);
 }
 
 .btn-hero-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
     background-color: #ffffff;
     color: #111111;
     border: 1px solid #dcdcdc;
     padding: 12px 22px;
-    border-radius: 30px;
-    font-size: 14.5px;
-    font-weight: 600;
-    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .btn-hero-secondary:hover] */
 .btn-hero-secondary:hover {
     border-color: #111111;
     transform: translateY(-2px);
 }
 
-/* Center Avatar Area - STRICTLY CIRCULAR PHOTO */
+/* Center Avatar Area */
 .hero-avatar-area {
     position: relative;
     width: 340px;
@@ -295,6 +461,7 @@ a {
     position: relative;
 }
 
+/* [d) Descendant Selector: .hero-photo img] */
 .hero-photo img {
     width: 100%;
     height: 100%;
@@ -304,11 +471,12 @@ a {
     transition: transform 0.4s ease;
 }
 
+/* [d) Descendant Selector + f) Pseudo-class: .hero-photo:hover img] */
 .hero-photo:hover img {
     transform: scale(1.07);
 }
 
-/* Right: Connect Card */
+/* Right Connect Card */
 .hero-connect-card {
     background-color: #fafafa;
     border: 1px solid #ebebeb;
@@ -363,6 +531,7 @@ a {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .hero-social-card:hover] */
 .hero-social-card:hover {
     border-color: #111111;
     transform: translateX(4px);
@@ -398,29 +567,7 @@ a {
     color: #888888;
 }
 
-.btn-collab {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border: none;
-    background-color: #111111;
-    color: #ffffff;
-    padding: 14px 26px;
-    border-radius: 30px;
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: transform 0.25s ease, background-color 0.25s ease;
-}
-
-.btn-collab:hover,
-.btn-talk:hover {
-    background-color: #333333;
-    transform: translateY(-3px);
-}
-
+/* Social Link Pill */
 .social-link {
     display: flex;
     align-items: center;
@@ -435,6 +582,7 @@ a {
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .social-link:hover] */
 .social-link:hover {
     border-color: #111111;
     transform: translateX(-6px);
@@ -445,6 +593,7 @@ a {
     font-weight: 700;
 }
 
+/* [e) Group Selector + d) Descendant: .social-icon, .social-link img] */
 .social-icon,
 .social-link img {
     width: 18px;
@@ -455,8 +604,18 @@ a {
 }
 
 /* ========================================
-   Footer
+   6. FOOTER SECTION (#footer, ID & Descendant) (c, d, f)
    ======================================== */
+/* [c) ID Selector: #footer] */
+#footer {
+    position: relative;
+    border-top: 1px solid #eeeeee;
+    padding: 24px 68px;
+    background-color: #ffffff;
+    margin-top: auto;
+}
+
+/* [b) Class Selector: .footer] */
 .footer {
     position: relative;
     border-top: 1px solid #eeeeee;
@@ -483,21 +642,24 @@ a {
     gap: 24px;
 }
 
+/* [d) Descendant Selector: .footer-links a / #footer .footer-links a] */
+#footer .footer-links a,
 .footer-links a {
     color: #666666;
     transition: color 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .footer-links a:hover] */
 .footer-links a:hover {
     color: #111111;
 }
 
 /* ========================================
-   Inner Pages Shared Styles
+   7. INNER PAGES SHARED STYLES (b, d)
    ======================================== */
 .page-main {
     flex: 1;
-    padding-top: 73px; /* Header height offset */
+    padding-top: 73px;
     display: flex;
     flex-direction: column;
 }
@@ -540,7 +702,6 @@ a {
 .page-title {
     position: relative;
     z-index: 1;
-    font-family: "Poppins", "Outfit", "Montserrat", Arial, Helvetica, sans-serif;
     font-size: clamp(40px, 6.5vw, 76px);
     line-height: 1.1;
     font-weight: 800;
@@ -560,7 +721,7 @@ a {
 }
 
 /* ========================================
-   About Page Layout
+   8. ABOUT PAGE LAYOUT (b, d, f)
    ======================================== */
 .about-container {
     max-width: 1240px;
@@ -573,7 +734,6 @@ a {
     align-items: start;
 }
 
-/* Left: Profile Card */
 .about-profile-card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -603,6 +763,7 @@ a {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
+/* [d) Descendant Selector: .about-photo img] */
 .about-photo img {
     width: 100%;
     height: 100%;
@@ -611,6 +772,7 @@ a {
     transition: transform 0.4s ease;
 }
 
+/* [f) Pseudo-class Selector: .about-photo:hover img] */
 .about-photo:hover img {
     transform: scale(1.08);
 }
@@ -655,16 +817,6 @@ a {
     color: #111111;
 }
 
-.text-green {
-    color: #2ecc71;
-}
-
-.btn-full {
-    width: 100%;
-    justify-content: center;
-}
-
-/* Right: Content */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -708,6 +860,7 @@ a {
     gap: 16px;
 }
 
+/* [b) Class Selector: .stat-card] */
 .stat-card {
     background-color: #fafafa;
     border: 1px solid #eeeeee;
@@ -719,6 +872,7 @@ a {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .stat-card:hover] */
 .stat-card:hover {
     transform: translateY(-4px);
     border-color: #111111;
@@ -757,6 +911,7 @@ a {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .pillar-card:hover] */
 .pillar-card:hover {
     transform: translateY(-4px);
     border-color: #111111;
@@ -815,7 +970,7 @@ a {
 }
 
 /* ========================================
-   Skills Page Layout
+   9. SKILLS PAGE LAYOUT (b, d, f)
    ======================================== */
 .skills-page-container {
     max-width: 1240px;
@@ -863,12 +1018,14 @@ a {
     color: #666666;
 }
 
+/* [d) Descendant Selector: .skills-grid .skill-card] */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
+/* [b) Class Selector: .skill-card] */
 .skill-card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -880,6 +1037,7 @@ a {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .skill-card:hover] */
 .skill-card:hover {
     transform: translateY(-4px);
     border-color: #111111;
@@ -1004,6 +1162,7 @@ a {
     display: block;
 }
 
+/* [f) Pseudo-class Selector: .chip:hover] */
 .chip:hover {
     transform: translateY(-2px);
     border-color: #111111;
@@ -1011,7 +1170,7 @@ a {
 }
 
 /* ========================================
-   Projects Page Layout
+   10. PROJECTS PAGE LAYOUT (b, d, f)
    ======================================== */
 .projects-page-container {
     max-width: 1240px;
@@ -1049,12 +1208,14 @@ a {
     letter-spacing: 0.5px;
 }
 
+/* [d) Descendant Selector: .projects-grid .project-card] */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 }
 
+/* [b) Class Selector: .project-card] */
 .project-card {
     display: flex;
     flex-direction: column;
@@ -1065,6 +1226,7 @@ a {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: .project-card:hover] */
 .project-card:hover {
     transform: translateY(-5px);
     border-color: #111111;
@@ -1088,6 +1250,7 @@ a {
     transition: transform 0.45s ease;
 }
 
+/* [d) Descendant Selector + f) Pseudo-class: .project-card:hover .project-image] */
 .project-card:hover .project-image {
     transform: scale(1.04);
 }
@@ -1183,6 +1346,7 @@ a {
     color: #111111;
 }
 
+/* [f) Pseudo-class Selector: .btn-project-code:hover] */
 .btn-project-code:hover {
     border-color: #111111;
     transform: translateY(-2px);
@@ -1210,6 +1374,7 @@ a {
     color: #ffffff;
 }
 
+/* [f) Pseudo-class Selector: .btn-project-demo:hover] */
 .btn-project-demo:hover {
     background-color: #333333;
     transform: translateY(-2px);
@@ -1224,7 +1389,7 @@ a {
 }
 
 /* ========================================
-   Contact Page Layout
+   11. CONTACT PAGE & FORMS (a, b, c, d, e, f, g)
    ======================================== */
 .contact-container {
     max-width: 1240px;
@@ -1268,6 +1433,7 @@ a {
     transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* [f) Pseudo-class Selector: a.contact-method:hover] */
 a.contact-method:hover {
     border-color: #111111;
     transform: translateY(-2px);
@@ -1305,6 +1471,7 @@ a.contact-method:hover {
     transform: translateY(-3px);
 }
 
+/* [b) Class Selector: .contact-form-card] */
 .contact-form-card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -1329,18 +1496,24 @@ a.contact-method:hover {
     line-height: 1.6;
 }
 
+/* [c) ID Selector: #contact-form & b) Class Selector: .contact-form] */
+#contact-form,
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
+/* [d) Descendant Selector: .contact-form .form-row] */
+.contact-form .form-row,
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 
+/* [d) Descendant Selector: .contact-form .form-field] */
+.contact-form .form-field,
 .form-field {
     display: flex;
     flex-direction: column;
@@ -1350,6 +1523,9 @@ a.contact-method:hover {
     color: #111111;
 }
 
+/* [g) Attribute Selectors: input[type="text"], input[type="email"] & e) Group Selector] */
+input[type="text"],
+input[type="email"],
 .form-field input,
 .form-field textarea {
     width: 100%;
@@ -1365,16 +1541,27 @@ a.contact-method:hover {
     transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-    color: #999999;
+/* [c) ID Selectors for form fields] */
+#contact-name,
+#contact-email,
+#contact-subject,
+#contact-message {
+    width: 100%;
 }
 
+/* [f) Pseudo-class Selector + g) Attribute Selector: input[type="text"]:focus, input[type="email"]:focus] */
+input[type="text"]:focus,
+input[type="email"]:focus,
 .form-field input:focus,
 .form-field textarea:focus {
     border-color: #111111;
     background-color: #ffffff;
     box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.06);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #999999;
 }
 
 .form-message {
@@ -1385,6 +1572,8 @@ a.contact-method:hover {
     line-height: 1.6;
 }
 
+/* [c) ID Selector: #form-status] */
+#form-status,
 .form-status {
     min-height: 20px;
     font-size: 13px;
@@ -1396,15 +1585,24 @@ a.contact-method:hover {
     margin-top: 4px;
 }
 
+/* [g) Attribute Selector: button[type="submit"]] */
+button[type="submit"] {
+    cursor: pointer;
+}
+
+/* [g) Attribute Selector: a[target="_blank"]] */
+a[target="_blank"] {
+    cursor: pointer;
+}
+
 /* ========================================
-   Animations
+   12. ANIMATIONS
    ======================================== */
 @keyframes reveal-down {
     from {
         opacity: 0;
         transform: translateY(-24px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1415,7 +1613,6 @@ a.contact-method:hover {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -1426,7 +1623,6 @@ a.contact-method:hover {
     100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-12px);
     }
@@ -1437,7 +1633,6 @@ a.contact-method:hover {
         opacity: 0;
         transform: translateX(-28px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1449,7 +1644,6 @@ a.contact-method:hover {
         opacity: 0;
         transform: translateX(28px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1468,9 +1662,10 @@ a.contact-method:hover {
 }
 
 /* ========================================
-   Responsive (Tablet & Mobile)
+   13. RESPONSIVE MEDIA QUERIES (f, g)
    ======================================== */
 @media (max-width: 992px) {
+    #header,
     .navbar {
         padding: 20px 32px;
     }
@@ -1528,6 +1723,7 @@ a.contact-method:hover {
         transform: none;
     }
 
+    /* [f) Pseudo-class: :checked and :nth-child] */
     .nav-toggle:checked ~ .nav-menu {
         display: flex;
     }
@@ -1603,6 +1799,7 @@ a.contact-method:hover {
         transform: translateY(-3px);
     }
 
+    #footer,
     .footer {
         padding: 20px 32px;
     }
@@ -1672,6 +1869,7 @@ a.contact-method:hover {
 }
 
 @media (max-width: 600px) {
+    #header,
     .navbar {
         padding: 16px 20px;
     }
@@ -1833,6 +2031,7 @@ a.contact-method:hover {
         justify-content: center;
     }
 
+    #footer,
     .footer {
         padding: 18px 20px;
     }
