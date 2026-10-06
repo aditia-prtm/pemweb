@@ -948,15 +948,20 @@ button:active,
     gap: 24px;
 }
 
+.about-cta-banner .cta-text {
+    color: #ffffff;
+}
+
 .about-cta-banner h4 {
     font-size: 19px;
     font-weight: 700;
+    color: #ffffff;
     margin-bottom: 6px;
 }
 
 .about-cta-banner p {
     font-size: 14px;
-    color: #aaaaaa;
+    color: #ffffff;
 }
 
 .about-cta-banner .btn-talk {
