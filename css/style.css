@@ -107,7 +107,7 @@ textarea {
 }
 
 /* Navigation & Header */
-.navbar {
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -519,7 +519,7 @@ button:active,
 }
 
 /* Footer */
-.footer {
+#footer {
     position: relative;
     border-top: 1px solid #eeeeee;
     padding: 24px 68px;
@@ -1528,11 +1528,11 @@ a.contact-method:hover {
 
 /* Responsive Media Queries */
 @media (max-width: 992px) {
-    .navbar {
+    #header {
         padding: 20px 32px;
     }
 
-    .navbar .btn-talk {
+    #header .btn-talk {
         display: none;
     }
 
@@ -1659,7 +1659,7 @@ a.contact-method:hover {
         transform: translateY(-3px);
     }
 
-    .footer {
+    #footer {
         padding: 20px 32px;
     }
 
@@ -1724,7 +1724,7 @@ a.contact-method:hover {
 }
 
 @media (max-width: 600px) {
-    .navbar {
+    #header {
         padding: 16px 20px;
     }
 
@@ -1881,7 +1881,7 @@ a.contact-method:hover {
         justify-content: center;
     }
 
-    .footer {
+    #footer {
         padding: 18px 20px;
     }
 
