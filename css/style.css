@@ -837,14 +837,24 @@ button:active,
     gap: 24px;
 }
 
-.about-cta-banner h4 {
+.cta-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-cta-banner h4,
+.cta-text h4 {
+    color: #ffffff;
     font-size: 19px;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
-.about-cta-banner p {
+.about-cta-banner p,
+.cta-text p {
+    color: #cccccc;
     font-size: 14px;
+    line-height: 1.6;
 }
 
 .about-cta-banner .btn-talk {
