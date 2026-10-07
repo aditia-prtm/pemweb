@@ -1,19 +1,4 @@
-/* ==========================================================================
-   PORTFOLIO STYLESHEET - ADITIA PRATAMA
-   --------------------------------------------------------------------------
-   Demonstrasi Penggunaan Selector CSS:
-   a) Element selector      : body, h1, h2, h3, p, a, img, button, input, textarea, header, footer, nav, section, article, aside
-   b) Class selector        : .navbar, .card, .highlight, .hero-title, .stat-card, .skill-card, .project-card, .btn-talk
-   c) ID selector           : #header, #footer, #nav-toggle, #contact-form, #contact-name, #contact-email, #contact-subject, #contact-message, #form-status
-   d) Descendant selector   : header nav a, .nav-menu a, .footer-links a, .contact-form .form-row, .skills-grid .skill-card, .projects-grid .project-card
-   e) Group selector        : h1, h2, h3 / input, textarea / .btn-hero-primary, .btn-hero-secondary / .btn-collab, .btn-talk
-   f) Pseudo-class selector : a:hover, button:active, input:focus, .nav-toggle:checked, .menu-toggle span:nth-child(1), .stat-card:hover
-   g) Attribute selector    : input[type="text"], input[type="email"], input[type="checkbox"], a[target="_blank"], button[type="submit"]
-   ========================================================================== */
-
-/* ========================================
-   1. RESET, BASE & ELEMENT SELECTORS (a, e)
-   ======================================== */
+/* Reset & Base */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* [a) Element Selector: body] */
 body {
     font-family: "Outfit", "Poppins", "Montserrat", Arial, Helvetica, sans-serif;
     background-color: #ffffff;
@@ -36,7 +20,6 @@ body {
     line-height: 1.6;
 }
 
-/* [e) Group Selector: h1, h2, h3, h4, h5, h6] */
 h1,
 h2,
 h3,
@@ -48,42 +31,35 @@ h6 {
     line-height: 1.25;
 }
 
-/* [a) Element Selector: h1] */
 h1 {
     font-weight: 800;
 }
 
-/* [a) Element Selector: h2] */
 h2 {
     font-weight: 700;
 }
 
-/* [a) Element Selector: h3] */
 h3 {
     font-weight: 700;
 }
 
-/* [a) Element Selector: p] */
 p {
     color: #666666;
     font-size: 15px;
     line-height: 1.7;
 }
 
-/* [a) Element Selector: a] */
 a {
     text-decoration: none;
     color: inherit;
     transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-/* [a) Element Selector: img] */
 img {
     max-width: 100%;
     display: block;
 }
 
-/* [a) Element Selector: button] */
 button {
     font-family: inherit;
     border: none;
@@ -91,7 +67,6 @@ button {
     cursor: pointer;
 }
 
-/* [e) Group Selector: input, textarea] */
 input,
 textarea {
     font-family: inherit;
@@ -100,7 +75,6 @@ textarea {
     outline: none;
 }
 
-/* [e) Group Selector: header, footer, nav, section, article, aside] */
 header,
 footer,
 nav,
@@ -110,10 +84,7 @@ aside {
     display: block;
 }
 
-/* ========================================
-   2. REUSABLE UTILITIES & CLASS SELECTORS (b)
-   ======================================== */
-/* [b) Class Selector: .card] */
+/* Utilities */
 .card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -121,7 +92,6 @@ aside {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [b) Class Selector: .highlight] */
 .highlight {
     color: #111111;
     font-weight: 700;
@@ -148,10 +118,7 @@ aside {
     flex-shrink: 0;
 }
 
-/* ========================================
-   3. NAVIGATION & HEADER (#header, ID & Descendant) (b, c, d, f, g)
-   ======================================== */
-/* [c) ID Selector: #header] */
+/* Navigation & Header */
 #header {
     position: fixed;
     top: 0;
@@ -166,7 +133,6 @@ aside {
     border-bottom: 1px solid #eeeeee;
 }
 
-/* [b) Class Selector: .navbar] */
 .navbar {
     position: fixed;
     top: 0;
@@ -175,7 +141,6 @@ aside {
     z-index: 1000;
 }
 
-/* [c) ID Selector: #nav-toggle & g) Attribute Selector: input[type="checkbox"]] */
 #nav-toggle,
 input[type="checkbox"].nav-toggle {
     display: none;
@@ -196,7 +161,6 @@ input[type="checkbox"].nav-toggle {
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .nav-brand:hover] */
 .nav-brand:hover {
     opacity: 0.75;
     transform: translateY(-1px);
@@ -210,7 +174,6 @@ input[type="checkbox"].nav-toggle {
     font-weight: 500;
 }
 
-/* [d) Descendant Selector: header nav a / .nav-menu a] */
 header nav a,
 .nav-menu a {
     display: flex;
@@ -219,22 +182,17 @@ header nav a,
     transition: color 0.25s ease, transform 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .nav-menu a:hover] */
 .nav-menu a:hover {
     color: #777777;
     transform: translateY(-2px);
 }
 
-/* [f) Pseudo-class Selector: .nav-menu a.active] */
 .nav-menu a.active {
     font-weight: 700;
     color: #111111;
 }
 
-/* ========================================
-   4. BUTTONS & INTERACTION (b, e, f, g)
-   ======================================== */
-/* [e) Group Selector: .btn-collab, .btn-talk] */
+/* Buttons */
 .btn-collab,
 .btn-talk {
     display: inline-flex;
@@ -253,7 +211,6 @@ header nav a,
     transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [e) Group Selector + f) Pseudo-class Selector: .btn-collab:hover, .btn-talk:hover] */
 .btn-collab:hover,
 .btn-talk:hover {
     background-color: #333333;
@@ -261,7 +218,6 @@ header nav a,
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* [f) Pseudo-class Selector: button:active] */
 button:active,
 .btn-collab:active,
 .btn-talk:active,
@@ -280,9 +236,7 @@ button:active,
     justify-content: center;
 }
 
-/* ========================================
-   5. HERO SECTION (a, b, d, e, f)
-   ======================================== */
+/* Hero Section */
 .hero {
     position: relative;
     padding: 110px 24px 48px;
@@ -308,7 +262,6 @@ button:active,
     z-index: 0;
 }
 
-/* [b) Class Selector: .hero-title] */
 .hero-title {
     position: relative;
     z-index: 2;
@@ -336,7 +289,7 @@ button:active,
     margin: 32px auto 0;
 }
 
-/* Left Hero Intro */
+/* Hero - Intro */
 .hero-intro-card {
     display: flex;
     flex-direction: column;
@@ -367,7 +320,6 @@ button:active,
     margin-bottom: 22px;
 }
 
-/* [d) Descendant Selector: .hero-intro-card .hero-cta-buttons] */
 .hero-intro-card .hero-cta-buttons,
 .hero-cta-buttons {
     display: flex;
@@ -376,7 +328,6 @@ button:active,
     margin-bottom: 0;
 }
 
-/* [e) Group Selector: .btn-hero-primary, .btn-hero-secondary] */
 .btn-hero-primary,
 .btn-hero-secondary {
     display: inline-flex;
@@ -395,7 +346,6 @@ button:active,
     color: #ffffff;
 }
 
-/* [f) Pseudo-class Selector: .btn-hero-primary:hover] */
 .btn-hero-primary:hover {
     background-color: #333333;
     transform: translateY(-2px);
@@ -408,13 +358,12 @@ button:active,
     padding: 12px 22px;
 }
 
-/* [f) Pseudo-class Selector: .btn-hero-secondary:hover] */
 .btn-hero-secondary:hover {
     border-color: #111111;
     transform: translateY(-2px);
 }
 
-/* Center Avatar Area */
+/* Hero - Avatar */
 .hero-avatar-area {
     position: relative;
     width: 340px;
@@ -461,7 +410,6 @@ button:active,
     position: relative;
 }
 
-/* [d) Descendant Selector: .hero-photo img] */
 .hero-photo img {
     width: 100%;
     height: 100%;
@@ -471,12 +419,11 @@ button:active,
     transition: transform 0.4s ease;
 }
 
-/* [d) Descendant Selector + f) Pseudo-class: .hero-photo:hover img] */
 .hero-photo:hover img {
     transform: scale(1.07);
 }
 
-/* Right Connect Card */
+/* Hero - Connect Card */
 .hero-connect-card {
     background-color: #fafafa;
     border: 1px solid #ebebeb;
@@ -531,7 +478,6 @@ button:active,
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .hero-social-card:hover] */
 .hero-social-card:hover {
     border-color: #111111;
     transform: translateX(4px);
@@ -567,7 +513,6 @@ button:active,
     color: #888888;
 }
 
-/* Social Link Pill */
 .social-link {
     display: flex;
     align-items: center;
@@ -582,7 +527,6 @@ button:active,
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .social-link:hover] */
 .social-link:hover {
     border-color: #111111;
     transform: translateX(-6px);
@@ -593,7 +537,6 @@ button:active,
     font-weight: 700;
 }
 
-/* [e) Group Selector + d) Descendant: .social-icon, .social-link img] */
 .social-icon,
 .social-link img {
     width: 18px;
@@ -603,19 +546,8 @@ button:active,
     flex-shrink: 0;
 }
 
-/* ========================================
-   6. FOOTER SECTION (#footer, ID & Descendant) (c, d, f)
-   ======================================== */
-/* [c) ID Selector: #footer] */
-#footer {
-    position: relative;
-    border-top: 1px solid #eeeeee;
-    padding: 24px 68px;
-    background-color: #ffffff;
-    margin-top: auto;
-}
-
-/* [b) Class Selector: .footer] */
+/* Footer */
+#footer,
 .footer {
     position: relative;
     border-top: 1px solid #eeeeee;
@@ -642,21 +574,17 @@ button:active,
     gap: 24px;
 }
 
-/* [d) Descendant Selector: .footer-links a / #footer .footer-links a] */
 #footer .footer-links a,
 .footer-links a {
     color: #666666;
     transition: color 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .footer-links a:hover] */
 .footer-links a:hover {
     color: #111111;
 }
 
-/* ========================================
-   7. INNER PAGES SHARED STYLES (b, d)
-   ======================================== */
+/* Inner Pages Shared */
 .page-main {
     flex: 1;
     padding-top: 73px;
@@ -720,9 +648,7 @@ button:active,
     line-height: 1.6;
 }
 
-/* ========================================
-   8. ABOUT PAGE LAYOUT (b, d, f)
-   ======================================== */
+/* About Page */
 .about-container {
     max-width: 1240px;
     width: 100%;
@@ -763,16 +689,15 @@ button:active,
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* [d) Descendant Selector: .about-photo img] */
 .about-photo img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
     object-position: center top;
     transition: transform 0.4s ease;
 }
 
-/* [f) Pseudo-class Selector: .about-photo:hover img] */
 .about-photo:hover img {
     transform: scale(1.08);
 }
@@ -853,14 +778,12 @@ button:active,
     line-height: 1.8;
 }
 
-/* Stats Grid */
 .about-stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
 
-/* [b) Class Selector: .stat-card] */
 .stat-card {
     background-color: #fafafa;
     border: 1px solid #eeeeee;
@@ -872,7 +795,6 @@ button:active,
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .stat-card:hover] */
 .stat-card:hover {
     transform: translateY(-4px);
     border-color: #111111;
@@ -893,7 +815,6 @@ button:active,
     line-height: 1.4;
 }
 
-/* Pillars Grid */
 .pillars-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -911,7 +832,6 @@ button:active,
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .pillar-card:hover] */
 .pillar-card:hover {
     transform: translateY(-4px);
     border-color: #111111;
@@ -936,7 +856,6 @@ button:active,
     line-height: 1.6;
 }
 
-/* CTA Banner */
 .about-cta-banner {
     background-color: #111111;
     color: #ffffff;
@@ -974,9 +893,7 @@ button:active,
     background-color: #eeeeee;
 }
 
-/* ========================================
-   9. SKILLS PAGE LAYOUT (b, d, f)
-   ======================================== */
+/* Skills Page */
 .skills-page-container {
     max-width: 1240px;
     width: 100%;
@@ -1023,14 +940,12 @@ button:active,
     color: #666666;
 }
 
-/* [d) Descendant Selector: .skills-grid .skill-card] */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-/* [b) Class Selector: .skill-card] */
 .skill-card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -1042,7 +957,6 @@ button:active,
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .skill-card:hover] */
 .skill-card:hover {
     transform: translateY(-4px);
     border-color: #111111;
@@ -1111,7 +1025,6 @@ button:active,
     border: 1px solid #eeeeee;
 }
 
-/* Skills Learning Spotlight */
 .skills-learning-box {
     background-color: #fafafa;
     border: 1px solid #e0e0e0;
@@ -1167,16 +1080,13 @@ button:active,
     display: block;
 }
 
-/* [f) Pseudo-class Selector: .chip:hover] */
 .chip:hover {
     transform: translateY(-2px);
     border-color: #111111;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* ========================================
-   10. PROJECTS PAGE LAYOUT (b, d, f)
-   ======================================== */
+/* Projects Page */
 .projects-page-container {
     max-width: 1240px;
     width: 100%;
@@ -1213,14 +1123,12 @@ button:active,
     letter-spacing: 0.5px;
 }
 
-/* [d) Descendant Selector: .projects-grid .project-card] */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 }
 
-/* [b) Class Selector: .project-card] */
 .project-card {
     display: flex;
     flex-direction: column;
@@ -1231,7 +1139,6 @@ button:active,
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: .project-card:hover] */
 .project-card:hover {
     transform: translateY(-5px);
     border-color: #111111;
@@ -1255,7 +1162,6 @@ button:active,
     transition: transform 0.45s ease;
 }
 
-/* [d) Descendant Selector + f) Pseudo-class: .project-card:hover .project-image] */
 .project-card:hover .project-image {
     transform: scale(1.04);
 }
@@ -1351,7 +1257,6 @@ button:active,
     color: #111111;
 }
 
-/* [f) Pseudo-class Selector: .btn-project-code:hover] */
 .btn-project-code:hover {
     border-color: #111111;
     transform: translateY(-2px);
@@ -1379,7 +1284,6 @@ button:active,
     color: #ffffff;
 }
 
-/* [f) Pseudo-class Selector: .btn-project-demo:hover] */
 .btn-project-demo:hover {
     background-color: #333333;
     transform: translateY(-2px);
@@ -1393,9 +1297,7 @@ button:active,
     margin-top: 48px;
 }
 
-/* ========================================
-   11. CONTACT PAGE & FORMS (a, b, c, d, e, f, g)
-   ======================================== */
+/* Contact Page */
 .contact-container {
     max-width: 1240px;
     width: 100%;
@@ -1438,7 +1340,6 @@ button:active,
     transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [f) Pseudo-class Selector: a.contact-method:hover] */
 a.contact-method:hover {
     border-color: #111111;
     transform: translateY(-2px);
@@ -1476,7 +1377,6 @@ a.contact-method:hover {
     transform: translateY(-3px);
 }
 
-/* [b) Class Selector: .contact-form-card] */
 .contact-form-card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -1501,7 +1401,6 @@ a.contact-method:hover {
     line-height: 1.6;
 }
 
-/* [c) ID Selector: #contact-form & b) Class Selector: .contact-form] */
 #contact-form,
 .contact-form {
     display: flex;
@@ -1509,7 +1408,6 @@ a.contact-method:hover {
     gap: 18px;
 }
 
-/* [d) Descendant Selector: .contact-form .form-row] */
 .contact-form .form-row,
 .form-row {
     display: grid;
@@ -1517,7 +1415,6 @@ a.contact-method:hover {
     gap: 16px;
 }
 
-/* [d) Descendant Selector: .contact-form .form-field] */
 .contact-form .form-field,
 .form-field {
     display: flex;
@@ -1528,7 +1425,6 @@ a.contact-method:hover {
     color: #111111;
 }
 
-/* [g) Attribute Selectors: input[type="text"], input[type="email"] & e) Group Selector] */
 input[type="text"],
 input[type="email"],
 .form-field input,
@@ -1546,7 +1442,6 @@ input[type="email"],
     transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* [c) ID Selectors for form fields] */
 #contact-name,
 #contact-email,
 #contact-subject,
@@ -1554,7 +1449,6 @@ input[type="email"],
     width: 100%;
 }
 
-/* [f) Pseudo-class Selector + g) Attribute Selector: input[type="text"]:focus, input[type="email"]:focus] */
 input[type="text"]:focus,
 input[type="email"]:focus,
 .form-field input:focus,
@@ -1577,7 +1471,6 @@ input[type="email"]:focus,
     line-height: 1.6;
 }
 
-/* [c) ID Selector: #form-status] */
 #form-status,
 .form-status {
     min-height: 20px;
@@ -1590,19 +1483,15 @@ input[type="email"]:focus,
     margin-top: 4px;
 }
 
-/* [g) Attribute Selector: button[type="submit"]] */
 button[type="submit"] {
     cursor: pointer;
 }
 
-/* [g) Attribute Selector: a[target="_blank"]] */
 a[target="_blank"] {
     cursor: pointer;
 }
 
-/* ========================================
-   12. ANIMATIONS
-   ======================================== */
+/* Animations */
 @keyframes reveal-down {
     from {
         opacity: 0;
@@ -1666,9 +1555,7 @@ a[target="_blank"] {
     }
 }
 
-/* ========================================
-   13. RESPONSIVE MEDIA QUERIES (f, g)
-   ======================================== */
+/* Responsive Media Queries */
 @media (max-width: 992px) {
     #header,
     .navbar {
@@ -1728,7 +1615,6 @@ a[target="_blank"] {
         transform: none;
     }
 
-    /* [f) Pseudo-class: :checked and :nth-child] */
     .nav-toggle:checked ~ .nav-menu {
         display: flex;
     }
@@ -1745,7 +1631,6 @@ a[target="_blank"] {
         transform: translateY(-7px) rotate(-45deg);
     }
 
-    /* Hero section tablet */
     .hero {
         padding: 120px 28px 36px;
     }
@@ -1819,7 +1704,6 @@ a[target="_blank"] {
         gap: 20px;
     }
 
-    /* About page tablet */
     .page-header-section {
         padding: 40px 32px 36px;
     }
@@ -1841,7 +1725,6 @@ a[target="_blank"] {
         grid-template-columns: 1fr;
     }
 
-    /* Skills page tablet */
     .skills-page-container {
         padding: 48px 32px 64px;
         gap: 48px;
@@ -1852,12 +1735,10 @@ a[target="_blank"] {
         gap: 16px;
     }
 
-    /* Projects page tablet */
     .projects-page-container {
         padding: 48px 32px 64px;
     }
 
-    /* Contact page tablet */
     .contact-container {
         grid-template-columns: 1fr;
         padding: 48px 32px 64px;
@@ -1936,7 +1817,6 @@ a[target="_blank"] {
         padding: 10px 14px;
     }
 
-    /* About page mobile */
     .page-header-section {
         padding: 32px 18px 28px;
     }
@@ -1965,7 +1845,6 @@ a[target="_blank"] {
         justify-content: center;
     }
 
-    /* Skills page mobile */
     .skills-page-container {
         padding: 32px 18px 48px;
         gap: 36px;
@@ -1984,7 +1863,6 @@ a[target="_blank"] {
         padding: 24px 20px;
     }
 
-    /* Projects page mobile */
     .projects-page-container {
         padding: 32px 18px 48px;
     }
@@ -2012,7 +1890,6 @@ a[target="_blank"] {
         margin-top: 32px;
     }
 
-    /* Contact page mobile */
     .contact-container {
         padding: 32px 18px 48px;
         gap: 24px;
