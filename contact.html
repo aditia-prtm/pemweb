@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!-- ===== NAVBAR ===== -->
     <header class="navbar" id="header">
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <a href="index.html" class="nav-brand">Aditia.</a>
@@ -46,7 +45,10 @@
 
         <section class="contact-container" aria-label="Informasi dan formulir kontak">
             <aside class="contact-info-panel">
-                <p class="projects-count">OPEN TO COLLABORATE</p>
+                <div class="contact-badge">
+                    <span class="status-dot"></span>
+                    <span>Open to Collaborate</span>
+                </div>
                 <h2 class="contact-info-title">Let's build something useful together.</h2>
                 <p class="contact-info-text">I am currently available for internships, freelance work, and new web projects. Send a message or reach me through any of the channels below.</p>
 
@@ -106,7 +108,6 @@
         </section>
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer class="footer" id="footer">
         <div class="footer-container">
             <p class="footer-copy">&copy; 2026 Aditia Pratama. All rights reserved.</p>
@@ -119,6 +120,8 @@
     </footer>
 
     <script>
+        // script ini untuk langsung mengirimkan pesan form ke email saya 
+
         const form = document.getElementById("contact-form");
         const statusEl = document.getElementById("form-status");
 
